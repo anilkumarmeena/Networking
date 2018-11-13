@@ -10,6 +10,6 @@ s.listen(5)
 while True:
     clientsocket,addr = s.accept()
     print("Got a connection from %s" % str(addr))
-    anil = 'You are connected'
-    clientsocket.send(anil.encode('UTF-8'))
+    msg = 'You are connected'
+    clientsocket.send(msg.encode('UTF-8'))
     clientsocket.close()
